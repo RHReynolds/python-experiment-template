@@ -28,12 +28,12 @@ uv tool install cruft
 
 **Using HTTPS:**
 ```bash
-cruft create https://github.com/your-username/cookiecutter-python-analysis.git
+cruft create https://github.com/your-username/python-experiment-template.git
 ```
 
 **Using SSH:**
 ```bash
-cruft create git@github.com:your-username/cookiecutter-python-analysis.git
+cruft create git@github.com:your-username/python-experiment-template.git
 ```
 
 Cruft will prompt you for a number of variables. Refer to the on-screen instructions.
