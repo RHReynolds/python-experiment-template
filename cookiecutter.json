@@ -1,0 +1,26 @@
+{
+    "experiment_id": "",
+    "project": "project",
+    "__project": "{{ cookiecutter.project|lower|replace(' ', '-') }}",
+    "description": "Experiment description",
+    "owner": "Author",
+    "username": "yourusername",
+    "git_platform": ["gitlab", "github"],
+    "python_version": "3.10.13",
+    "repo_dir": "",
+    "__repo_name": "{% if cookiecutter.experiment_id %}{{ cookiecutter.experiment_id }}-{{ cookiecutter.__project}}{% else %}{{ cookiecutter.__project}}{% endif %}",
+    "__ssh": "{% if cookiecutter.git_platform == 'github' %}git@github.com:{{ cookiecutter.username }}/{{ cookiecutter.__repo_name }}.git{% else %}git@gitlab.com:{{ cookiecutter.username }}/{{ cookiecutter.__repo_name }}.git{% endif %}",
+    "__https": "{% if cookiecutter.git_platform == 'github' %}https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.__repo_name }}{% else %}https://gitlab.com/{{ cookiecutter.username }}/{{ cookiecutter.__repo_name }}{% endif %}",
+    "__pages_url": "{% if cookiecutter.git_platform == 'github' %}https://{{ cookiecutter.username }}.github.io/{{ cookiecutter.__repo_name }}{% else %}https://{{ cookiecutter.username }}.gitlab.io/{{ cookiecutter.__repo_name }}{% endif %}",
+    "__prompts__": {
+        "experiment_id": "(Optional) Provide your experiment id, in the format bx{number}, e.g. bx1. Leave empty if not needed.",
+        "project": "Provide the project name for your experiment.",
+        "description": "Provide a brief description of your experiment.",
+        "owner": "Provide your first and last name.",
+        "username": "Provide your git platform username.",
+        "git_platform": "Choose your git platform (gitlab or github).",
+        "python_version": "Python version to use for the project.",
+        "repo_dir": "(Optional) Provide the group in which your experiment will be stored. Leave empty if not needed."
+    },
+    "_copy_without_render": ["index.md"]
+}
