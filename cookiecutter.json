@@ -22,5 +22,5 @@
         "python_version": "Python version to use for the project.",
         "repo_dir": "(Optional) Provide the group in which your experiment will be stored. Leave empty if not needed."
     },
-    "_copy_without_render": ["index.md"]
+    "_copy_without_render": ["index.md", ".github/workflows/*.yml"]
 }
