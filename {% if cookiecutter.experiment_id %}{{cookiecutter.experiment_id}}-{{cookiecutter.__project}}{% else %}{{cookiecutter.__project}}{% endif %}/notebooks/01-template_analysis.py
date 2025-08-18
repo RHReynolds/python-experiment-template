@@ -29,11 +29,8 @@
 #
 # ## Load modules
 
-# %% [markdown]
-
-import matplotlib.pyplot as plt
-
 # %%
+import matplotlib.pyplot as plt
 import session_info
 
 # %% [markdown]
