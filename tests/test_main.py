@@ -9,7 +9,15 @@ import pytest
 
 def verify_project_structure(project_dir: Path) -> None:
     """Verify the generated project has required files."""
-    required_files = ["README.md", "index.md", "pyproject.toml"]
+    required_files = [
+        "README.md",
+        "index.md",
+        "pyproject.toml",
+        "notebooks/01-template_analysis.qmd",
+        "notebooks/01-template_analysis.py",
+        "scripts/template.py",
+        "src/main.py",
+    ]
 
     for filename in required_files:
         file_path = project_dir / filename
