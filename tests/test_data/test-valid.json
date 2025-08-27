@@ -1,0 +1,7 @@
+{
+    "default_context": {
+        "experiment_id": "ex1", 
+        "project": "test-project",
+        "owner": "Test Author"
+    }
+}

@@ -70,9 +70,6 @@ uv pip install -e .
 
 # Install development dependencies
 uv pip install -e ".[dev]"
-
-# Install AWS dependencies (if needed)
-uv pip install -e ".[aws]"
 ```
 
 ### Setting up pre-commit

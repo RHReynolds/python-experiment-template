@@ -1,0 +1,67 @@
+---
+title: Analysis template
+authors: 
+  - {{ cookiecutter.owner }}
+date: today
+format: 
+  html:
+    code-fold: true
+    highlight: pygments
+    theme: simplex
+    toc: true
+    embed-resources: true
+jupyter: python3
+---
+
+# Title
+
+## Aim
+
+-
+
+## Background
+
+- 
+
+## Methods
+
+- 
+
+## Load modules
+
+```{python}
+import session_info
+import matplotlib.pyplot as plt
+```
+
+## Package versions
+
+```{python}
+session_info.show()
+```
+
+## Results
+
+::: {.panel-tabset}
+
+### Text
+
+- Add any observations about results/figures here.
+- For figures, need to make sure your keys don't have a "_" in them and have `#| fig-cap: "Figure caption"` to refer to them in the text (@fig-plot)
+
+### Figures
+
+```{python}
+#| label: fig-plot
+#| fig-cap: "Plot"
+
+plt.plot([1,23,2,4])
+plt.show()
+```
+
+:::
+<br><br>
+
+## Conclusions
+
+-

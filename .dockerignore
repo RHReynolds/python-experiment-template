@@ -1,0 +1,67 @@
+# Ignore R-related temporary files
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+
+# Ignore R package files
+*.tar.gz
+*.Rcheck/
+inst/
+src/
+man/
+
+# Ignore R project directories
+docs/
+logs/
+processed_data/
+R/
+notebooks/
+raw_data/
+scripts/
+work/
+_targets/
+src/
+
+# Ignore system-specific files
+.Rapp.history
+.Renviron
+.Rprofile
+.Renviron.site
+.Rproj
+
+# Ignore common version control files
+.git
+.gitignore
+.gitmodules
+.svn
+.cvsignore
+.hgignore
+
+# Ignore other unnecessary files
+*.log
+*.aux
+*.out
+*.nav
+*.snm
+*.toc
+*.bbl
+*.blg
+*.swp
+*.pdf
+*.zip
+*.gz
+*.tar
+*.tgz
+*.xz
+*.7z
+*.rds
+*.md
+*.Rmd
+.DS_Store
+Thumbs.db
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
