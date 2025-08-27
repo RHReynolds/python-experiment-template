@@ -7,7 +7,7 @@ VALID_ID = r"[a-z]{2}\d+"
 
 def check_experiment_id(experiment_id: str) -> None:
     assert bool(
-        re.fullmatch(VALID_ID, experiment_id)
+        experiment_id == "" or re.fullmatch(VALID_ID, experiment_id)
     ), f"Invalid experiment_id supplied: {experiment_id}"
 
 
