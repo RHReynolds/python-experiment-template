@@ -1,6 +1,6 @@
 {
     "default_context": {
-        "experiment_id": "ext1", 
+        "experiment_id": "extnd1", 
         "project": "test-project",
         "owner": "Test Author"
     }
