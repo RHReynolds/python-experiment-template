@@ -57,8 +57,8 @@ def test_default_template(tmp_path: Path, tool: str) -> None:
 @pytest.mark.parametrize(
     "tool,config_file,should_contain",
     [
-        ("cruft", "test-valid.json", "ex1"),
-        ("cookiecutter", "test-valid.json", "ex1"),
+        ("cruft", "test-valid.json", "extn1"),
+        ("cookiecutter", "test-valid.json", "extn1"),
     ],
 )
 def test_valid_config(

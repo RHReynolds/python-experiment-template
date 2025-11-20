@@ -2,7 +2,7 @@ import os
 import re
 import tempfile
 
-VALID_ID = r"[a-z]{2}\d+"
+VALID_ID = r"[a-z]{2,4}\d+"
 
 
 def check_experiment_id(experiment_id: str) -> None:
