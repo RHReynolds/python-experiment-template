@@ -4,6 +4,9 @@
 raw_data/*
 processed_data/*
 
+# Scratch space for throwaway / local-only outputs
+scratch/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

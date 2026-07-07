@@ -27,21 +27,65 @@ Within this repository you will find:
 
 ## Reproducibility
 
-### `pyproject.toml`
+### `Makefile`
 
-1. Please add any python dependencies to the `dependencies` list in `pyproject.toml`.
-2. These can optionally be installed using:
+Common tasks are wrapped in the `Makefile`. Run `make` (or `make help`) to
+list the available targets:
 
 ``` bash
-uv venv .venv
-source .venv/bin/activate
-
-# Install project dependencies
-uv pip install -e .
-
-# For development dependencies
-uv pip install -e ".[dev]"
+make install   # create .venv and install dependencies from uv.lock
+make check     # verify uv.lock is in sync and run pre-commit on all files
 ```
+
+`make install` is the recommended way to set up the project.
+
+### `pyproject.toml`
+
+Under the hood, the `Makefile` targets call [`uv`](https://docs.astral.sh/uv/).
+Runtime dependencies are declared under `dependencies` in `pyproject.toml`,
+and development tooling under the `dev` dependency group. Exact resolved
+versions are pinned in `uv.lock` for reproducible installs.
+
+`make install` runs `uv sync`, which creates `.venv` and installs the project
+plus the `dev` group from the lockfile:
+
+``` bash
+uv sync
+```
+
+Run commands inside the environment with `uv run`, or activate `.venv`
+directly:
+
+``` bash
+uv run python scripts/template.py --output_dir scratch --a 1 --b 2
+# or
+source .venv/bin/activate
+```
+
+For a lean, production-only environment, skip the `dev` group:
+
+``` bash
+uv sync --no-dev
+```
+
+> [!TIP]
+> Let `uv` manage dependencies for you instead of editing `pyproject.toml` by
+> hand. `uv add` adds the package, updates `pyproject.toml` and `uv.lock`, and
+> installs it in one step:
+>
+> ``` bash
+> # Add a runtime dependency
+> uv add polars
+>
+> # Add a development dependency (to the `dev` group)
+> uv add --dev ipython
+>
+> # Remove a dependency
+> uv remove polars
+> ```
+>
+> Commit the updated `uv.lock` so collaborators reproduce the same
+> environment.
 
 ## Citations
 <!-- Add any necessary software citations -->

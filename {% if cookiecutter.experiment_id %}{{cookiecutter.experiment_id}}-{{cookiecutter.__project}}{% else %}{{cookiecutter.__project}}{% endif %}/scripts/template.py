@@ -26,6 +26,8 @@ def main(args: Args) -> None:
 
 if __name__ == "__main__":
     args = Args().parse_args()
+    # Create the output directory if it doesn't already exist.
+    args.output_dir.mkdir(parents=True, exist_ok=True)
     # Save reproducibility info as a json alongside the outputs.
     args.save(args.output_dir / f"{SCRIPT_NAME}.args.json")
 
