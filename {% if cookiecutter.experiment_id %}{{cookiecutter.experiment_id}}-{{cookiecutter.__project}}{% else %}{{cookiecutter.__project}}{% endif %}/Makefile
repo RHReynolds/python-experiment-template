@@ -2,6 +2,7 @@
 install: ## Install the virtual environment
 	@echo "🚀 Creating virtual environment"
 	@uv sync
+	@uv run pre-commit install
 
 .PHONY: check
 check: ## Run code quality tools
