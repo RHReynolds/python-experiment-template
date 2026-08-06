@@ -13,7 +13,7 @@
     "__https": "{% if cookiecutter.git_platform == 'github' %}https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.__repo_name }}{% else %}https://gitlab.com/{{ cookiecutter.username }}/{{ cookiecutter.__repo_name }}{% endif %}",
     "__pages_url": "{% if cookiecutter.git_platform == 'github' %}https://{{ cookiecutter.username }}.github.io/{{ cookiecutter.__repo_name }}{% else %}https://{{ cookiecutter.username }}.gitlab.io/{{ cookiecutter.__repo_name }}{% endif %}",
     "__prompts__": {
-        "experiment_id": "(Optional) Provide your experiment id, in the format bx{number}, e.g. bx1. Note: only 2-4 letters are permitted prior to the number. Leave empty if not needed.",
+        "experiment_id": "(Optional) Provide your experiment id, in the format <prefix><number>, where <prefix> is any 2-4 letter abbreviation of your choosing, e.g. ex1, bx3, astn12. Leave empty if not needed.",
         "project": "Provide the project name for your experiment.",
         "description": "Provide a brief description of your experiment.",
         "owner": "Provide your first and last name.",
