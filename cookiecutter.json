@@ -17,7 +17,7 @@
         "project": "Provide the project name for your experiment.",
         "description": "Provide a brief description of your experiment.",
         "owner": "Provide your first and last name.",
-        "username": "Provide your git platform username.",
+        "username": "Provide your git platform username. If this experiment is to be saved in an organisation git platform, please provide this the organisation username.",
         "git_platform": "Choose your git platform (gitlab or github).",
         "python_version": "Python version to use for the project.",
         "repo_dir": "(Optional) Provide the group in which your experiment will be stored. Leave empty if not needed."
